@@ -1,0 +1,16 @@
+---
+base: lua51
+
+globals:
+  vim:
+    any: true
+  cx:
+    any: true
+  jit:
+    any: true
+  astronvim:
+    any: true
+  ui:
+    any: true
+  ya:
+    any: true
