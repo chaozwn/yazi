@@ -1,7 +1,7 @@
 # Install
 
 ```shell
-brew install file yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide eza glow exiftool bat lazygit
+brew install file yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide eza glow exiftool bat lazygit ouch
 brew tap homebrew/cask-fonts && brew install --cask font-symbols-only-nerd-font
 ```
 
@@ -39,7 +39,7 @@ alias la="eza --icons --long --header --all"
 alias lg="eza --icons --long --header --all --git"
 
 # 替换 tree 命令
-alias tree="eza --tree --icons"
+alias lt="eza --tree --icons"
 
 eval "$(zoxide init zsh)"
 ```
