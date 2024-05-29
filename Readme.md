@@ -39,7 +39,7 @@ alias la="eza --icons --long --header --all"
 alias lg="eza --icons --long --header --all --git"
 
 # 替换 tree 命令
-alias lt="eza --tree --icons"
+alias lt="eza --tree -L 2 --icons"
 
 eval "$(zoxide init zsh)"
 ```
