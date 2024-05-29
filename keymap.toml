@@ -325,6 +325,12 @@ keymap = [
 	], run = "tab_create --current", desc = "Create a new tab using the current path" },
 
 	{ on = [
+		"t",
+		"x",
+	], run = "tab_close --current", desc = "Create a new tab using the current path" },
+
+
+	{ on = [
 		"1",
 	], run = "tab_switch 0", desc = "Switch to the first tab" },
 	{ on = [
