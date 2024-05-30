@@ -212,6 +212,10 @@ keymap = [
 		"l",
 	], run = "shell --block lazygit --confirm", desc = "open lazygit" },
 	{ on = [
+		"t",
+		"d",
+	], run = "shell --block lazydocker --confirm", desc = "open lazydocker" },
+	{ on = [
 		".",
 	], run = "hidden toggle", desc = "Toggle the visibility of hidden files" },
 	{ on = [
