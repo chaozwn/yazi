@@ -45,3 +45,5 @@ require("searchjump"):setup {
   opt_lable_fg = "#EADFC8",
   opt_lable_bg = "#BA603D",
 }
+
+require("eza-preview"):setup()

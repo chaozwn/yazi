@@ -138,8 +138,8 @@ suppress_preload = false
 prepend_previewers = [
   { name = "*.md", run = "glow" },
   { mime = "audio/*", run = "exifaudio" },
+  { name = "*/", run = "eza-preview" },
 ]
-
 
 preloaders = [
   { name = "*", cond = "!mime", run = "mime", multi = true, prio = "high" },

@@ -5,6 +5,10 @@
 [manager]
 
 keymap = [
+	# eza preview
+	{ on = [
+		"E",
+	], run = "plugin eza-preview", desc = "Toggle tree/list dir preview" },
 	{ on = [
 		"<Esc>",
 	], run = "escape", desc = "Exit visual mode, clear selected, or cancel search" },
