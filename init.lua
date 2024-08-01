@@ -1,42 +1,70 @@
--- https://yazi-rs.github.io/docs/tips#show-symlink-in-status-bar
-function Status:name()
-  local h = cx.active.current.hovered
-  if not h then return ui.Span "" end
+require("searchjump"):setup {
+  opt_unmatch_fg = "#928374",
+  opt_match_str_fg = "#000000",
+  opt_match_str_bg = "#73AC3A",
+  opt_lable_fg = "#EADFC8",
+  opt_lable_bg = "#BA603D",
+}
 
-  local linked = ""
-  if h.link_to ~= nil then linked = " -> " .. tostring(h.link_to) end
-  return ui.Span(" " .. h.name .. linked)
-end
+require("eza-preview"):setup()
 
--- https://yazi-rs.github.io/docs/tips#show-usergroup-of-files-in-status-bar
-function Status:owner()
-  local h = cx.active.current.hovered
-  if h == nil or ya.target_family() ~= "unix" then return ui.Line {} end
+local tokyonight_theme = require("yatline-tokyonight"):setup "moon"
+-- local tokyonight_theme = require("yatline-catppuccin"):setup "moon"
 
-  return ui.Line {
-    ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg "magenta",
-    ui.Span ":",
-    ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg "magenta",
-    ui.Span " ",
-  }
-end
+require("yatline"):setup {
+  theme = tokyonight_theme,
+  tab_width = 20,
+  tab_use_inverse = false,
+  show_background = true,
+  display_header_line = true,
+  display_status_line = true,
 
-function Status:render(area)
-  self.area = area
+  header_line = {
+    left = {
+      section_a = {
+        { type = "line", custom = false, name = "tabs", params = { "left" } },
+      },
+      section_b = {},
+      section_c = {},
+    },
+    right = {
+      section_a = {
+        { type = "string", custom = false, name = "date", params = { "%A, %d %B %Y" } },
+      },
+      section_b = {
+        { type = "string", custom = false, name = "date", params = { "%X" } },
+      },
+      section_c = {},
+    },
+  },
 
-  local left = ui.Line { self:mode(), self:size(), self:name() }
-  local right = ui.Line {
-    self:owner(),
-    self:permissions(),
-    self:percentage(),
-    self:position(),
-  }
-  return {
-    ui.Paragraph(area, { left }),
-    ui.Paragraph(area, { right }):align(ui.Paragraph.RIGHT),
-    table.unpack(Progress:render(area, right:width())),
-  }
-end
+  status_line = {
+    left = {
+      section_a = {
+        { type = "string", custom = false, name = "tab_mode" },
+      },
+      section_b = {
+        { type = "string", custom = false, name = "hovered_size" },
+      },
+      section_c = {
+        { type = "string", custom = false, name = "hovered_name" },
+        { type = "coloreds", custom = false, name = "count" },
+      },
+    },
+    right = {
+      section_a = {
+        { type = "string", custom = false, name = "cursor_position" },
+      },
+      section_b = {
+        { type = "string", custom = false, name = "cursor_percentage" },
+      },
+      section_c = {
+        { type = "string", custom = false, name = "hovered_file_extension", params = { true } },
+        { type = "coloreds", custom = false, name = "permissions" },
+      },
+    },
+  },
+}
 
 require("searchjump"):setup {
   opt_unmatch_fg = "#928374",

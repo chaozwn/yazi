@@ -1,7 +1,7 @@
 # Install
 
 ```shell
-brew install file yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide eza glow exiftool bat lazygit ouch lazydocker
+brew install file yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide eza glow exiftool bat lazygit ouch lazydocker 7-zip
 brew tap homebrew/cask-fonts && brew install --cask font-symbols-only-nerd-font
 ```
 
