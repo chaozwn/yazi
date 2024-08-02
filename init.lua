@@ -37,7 +37,7 @@ require("yatline"):setup {
         { type = "string", custom = false, name = "date", params = { "%X" } },
       },
       section_c = {
-        { type = "coloreds", custom = false, name = "githead" },
+        -- { type = "coloreds", custom = false, name = "githead" },
       },
     },
   },
@@ -71,29 +71,29 @@ require("yatline"):setup {
 
 require("eza-preview"):setup()
 
-require("yatline-githead"):setup {
-  theme = tokyonight_theme,
-
-  show_branch = true,
-  branch_prefix = "",
-  branch_symbol = "",
-  branch_borders = "[]",
-
-  commit_symbol = "",
-
-  show_stashes = true,
-  stashes_symbol = "󰊢",
-
-  show_state = true,
-  show_state_prefix = true,
-  state_symbol = "󰈚",
-
-  show_staged = true,
-  staged_symbol = "✓ ",
-
-  show_unstaged = true,
-  unstaged_symbol = "✗ ",
-
-  show_untracked = true,
-  untracked_symbol = "★ ",
-}
+-- require("yatline-githead"):setup {
+--   theme = tokyonight_theme,
+--
+--   show_branch = true,
+--   branch_prefix = "",
+--   branch_symbol = "",
+--   branch_borders = "[]",
+--
+--   commit_symbol = "",
+--
+--   show_stashes = true,
+--   stashes_symbol = "󰊢",
+--
+--   show_state = true,
+--   show_state_prefix = true,
+--   state_symbol = "󰈚",
+--
+--   show_staged = true,
+--   staged_symbol = "✓ ",
+--
+--   show_unstaged = true,
+--   unstaged_symbol = "✗ ",
+--
+--   show_untracked = true,
+--   untracked_symbol = "★ ",
+-- }
