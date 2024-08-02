@@ -168,7 +168,7 @@ local function tokyonight_theme(flavor)
     state_color = tokyonight_palette.maroon,
     staged_color = tokyonight_palette.green1,
     unstaged_color = tokyonight_palette.red1,
-    untracked_color = tokyonight_palette.teal,
+    untracked_color = tokyonight_palette.magenta,
   }
 end
 

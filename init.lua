@@ -1,9 +1,11 @@
 require("searchjump"):setup {
-  opt_unmatch_fg = "#928374",
-  opt_match_str_fg = "#000000",
-  opt_match_str_bg = "#73AC3A",
-  opt_lable_fg = "#EADFC8",
-  opt_lable_bg = "#BA603D",
+  opt_unmatch_fg = "#545c7e",
+  opt_match_str_fg = "#c8d3f5",
+  opt_match_str_bg = "#3e68d7",
+  opt_lable_fg = "#c8d3f5",
+  opt_lable_bg = "#ff007c",
+  opt_only_current = false, -- only search the current window
+  -- opt_search_patterns = {}  -- demo:{"%.e%d+","s%d+e%d+"}
 }
 
 require("eza-preview"):setup()
@@ -34,7 +36,9 @@ require("yatline"):setup {
       section_b = {
         { type = "string", custom = false, name = "date", params = { "%X" } },
       },
-      section_c = {},
+      section_c = {
+        { type = "coloreds", custom = false, name = "githead" },
+      },
     },
   },
 
@@ -47,7 +51,7 @@ require("yatline"):setup {
         { type = "string", custom = false, name = "hovered_size" },
       },
       section_c = {
-        { type = "string", custom = false, name = "hovered_name" },
+        { type = "string",   custom = false, name = "hovered_name" },
         { type = "coloreds", custom = false, name = "count" },
       },
     },
@@ -60,18 +64,36 @@ require("yatline"):setup {
       },
       section_c = {
         { type = "string", custom = false, name = "hovered_file_extension", params = { true } },
-        { type = "coloreds", custom = false, name = "permissions" },
       },
     },
   },
 }
 
-require("searchjump"):setup {
-  opt_unmatch_fg = "#928374",
-  opt_match_str_fg = "#000000",
-  opt_match_str_bg = "#73AC3A",
-  opt_lable_fg = "#EADFC8",
-  opt_lable_bg = "#BA603D",
-}
-
 require("eza-preview"):setup()
+
+require("yatline-githead"):setup {
+  theme = tokyonight_theme,
+
+  show_branch = true,
+  branch_prefix = "",
+  branch_symbol = "",
+  branch_borders = "[]",
+
+  commit_symbol = "",
+
+  show_stashes = true,
+  stashes_symbol = "󰊢",
+
+  show_state = true,
+  show_state_prefix = true,
+  state_symbol = "󰈚",
+
+  show_staged = true,
+  staged_symbol = "✓ ",
+
+  show_unstaged = true,
+  unstaged_symbol = "✗ ",
+
+  show_untracked = true,
+  untracked_symbol = "★ ",
+}
