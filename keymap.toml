@@ -804,3 +804,8 @@ desc = "find file by content (ripgrep match)"
 on = ["f"]
 run = "plugin fg --args='fzf'"
 desc = "find file by filename"
+
+[[manager.prepend_keymap]]
+on = "<C-y>"
+run = ["plugin system-clipboard"]
+desc = "copy file to system-clipboard"
