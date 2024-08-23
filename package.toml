@@ -3,7 +3,7 @@ deps = [
   { use = "Sonico98/exifaudio", rev = "6205460" },
   { use = "sharklasers996/eza-preview", rev = "7ca4c25" },
   { use = "lpnh/fg", rev = "a572dee" },
-  { use = "Reledia/glow", rev = "536185a" },
+  { use = "Reledia/glow", rev = "536185a" }, { use = "ndtoan96/ouch", rev = "251da69" },
 ]
 
 [flavor]
