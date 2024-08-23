@@ -14,7 +14,7 @@ echo 'export PATH="/opt/homebrew/opt/file-formula/bin:$PATH"' >> ~/.zshrc
 > zsh/bash
 
 ```shell
-function ya() {
+function y() {
  local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
  yazi "$@" --cwd-file="$tmp"
  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
