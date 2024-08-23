@@ -1,3 +1,5 @@
+require("eza-preview"):setup()
+
 require("searchjump"):setup {
   opt_unmatch_fg = "#545c7e",
   opt_match_str_fg = "#c8d3f5",
@@ -7,8 +9,6 @@ require("searchjump"):setup {
   opt_only_current = false, -- only search the current window
   -- opt_search_patterns = {}  -- demo:{"%.e%d+","s%d+e%d+"}
 }
-
-require("eza-preview"):setup()
 
 local tokyonight_theme = require("yatline-tokyonight"):setup "moon"
 -- local tokyonight_theme = require("yatline-catppuccin"):setup "moon"
@@ -67,4 +67,3 @@ require("yatline"):setup {
   },
 }
 
-require("eza-preview"):setup()
