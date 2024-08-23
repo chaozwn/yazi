@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "Sonico98/exifaudio", rev = "6205460" }]
+
+[flavor]
+deps = []
