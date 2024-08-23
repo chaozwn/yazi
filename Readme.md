@@ -5,6 +5,10 @@ brew install file yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide e
 brew tap homebrew/cask-fonts && brew install --cask font-symbols-only-nerd-font
 ```
 
+```shell
+echo 'export PATH="/opt/homebrew/opt/file-formula/bin:$PATH"' >> ~/.zshrc
+```
+
 # Add before to shell
 
 > zsh/bash
@@ -20,9 +24,19 @@ function ya() {
 }
 ```
 
+# how to upgrade plugins
+
 ```shell
-echo 'export PATH="/opt/homebrew/opt/file-formula/bin:$PATH"' >> ~/.zshrc
+# Add the plugin
+ya pack -a lpnh/fg
+
+# Install the plugin
+ya pack -i
+
+# Upgrade the plugin
+ya pack -u
 ```
+
 
 # exa
 

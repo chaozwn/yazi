@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "Sonico98/exifaudio", rev = "6205460" }, { use = "sharklasers996/eza-preview", rev = "7ca4c25" }]
+deps = [{ use = "Sonico98/exifaudio", rev = "6205460" }, { use = "sharklasers996/eza-preview", rev = "7ca4c25" }, { use = "lpnh/fg", rev = "a572dee" }]
 
 [flavor]
 deps = []

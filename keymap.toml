@@ -792,13 +792,13 @@ desc = "searchjump"
 
 [[manager.prepend_keymap]]
 on = ["S"]
-run = "plugin fg"
-desc = "find file by content (fuzzy match)"
+run = "plugin fg --args='rg'"
+desc = "find file by content (ripgrep match)"
 
 [[manager.prepend_keymap]]
 on = ["F"]
-run = "plugin fg --args='rg'"
-desc = "find file by content (ripgrep match)"
+run = "plugin fg --args='rga'"
+desc = "find file by content (ripgrep-all)"
 
 [[manager.prepend_keymap]]
 on = ["f"]
