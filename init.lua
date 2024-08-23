@@ -23,9 +23,7 @@ require("yatline"):setup {
 
   header_line = {
     left = {
-      section_a = {
-        { type = "line", custom = false, name = "tabs", params = { "left" } },
-      },
+      section_a = { { type = "line", custom = false, name = "tabs", params = { "left" } }, },
       section_b = {},
       section_c = {},
     },
@@ -70,30 +68,3 @@ require("yatline"):setup {
 }
 
 require("eza-preview"):setup()
-
--- require("yatline-githead"):setup {
---   theme = tokyonight_theme,
---
---   show_branch = true,
---   branch_prefix = "",
---   branch_symbol = "",
---   branch_borders = "[]",
---
---   commit_symbol = "",
---
---   show_stashes = true,
---   stashes_symbol = "󰊢",
---
---   show_state = true,
---   show_state_prefix = true,
---   state_symbol = "󰈚",
---
---   show_staged = true,
---   staged_symbol = "✓ ",
---
---   show_unstaged = true,
---   unstaged_symbol = "✗ ",
---
---   show_untracked = true,
---   untracked_symbol = "★ ",
--- }
