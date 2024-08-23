@@ -213,10 +213,6 @@ keymap = [
 	], run = "shell --interactive --block", desc = "Run a shell command (block the UI until the command finishes)" },
 	{ on = [
 		"t",
-		"l",
-	], run = "shell --block lazygit --confirm", desc = "open lazygit" },
-	{ on = [
-		"t",
 		"d",
 	], run = "shell --block lazydocker --confirm", desc = "open lazydocker" },
 	{ on = [
@@ -809,3 +805,8 @@ desc = "find file by filename"
 on = "<C-y>"
 run = ["plugin system-clipboard"]
 desc = "copy file to system-clipboard"
+
+[[manager.prepend_keymap]]
+on   = [ "t", "l" ]
+run  = "plugin lazygit"
+desc = "run lazygit"
