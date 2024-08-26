@@ -794,7 +794,7 @@ desc = "find file by content (ripgrep match)"
 [[manager.prepend_keymap]]
 on = ["F"]
 run = "plugin fg --args='rga'"
-desc = "find file by content (ripgrep-all)"
+desc = "find file by content (ripgrep also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.)"
 
 [[manager.prepend_keymap]]
 on = ["f"]
