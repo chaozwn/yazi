@@ -23,16 +23,16 @@ require("yatline"):setup {
 
   header_line = {
     left = {
-      section_a = { { type = "line", custom = false, name = "tabs", params = { "left" } }, },
+      section_a = { { type = "line", custom = false, name = "tabs", params = { "left" } } },
       section_b = {},
       section_c = {},
     },
     right = {
       section_a = {
-        { type = "string", custom = false, name = "date", params = { "%A, %d %B %Y" } },
+        { type = "string", custom = false, name = "date", params = { "%X" } },
       },
       section_b = {
-        { type = "string", custom = false, name = "date", params = { "%X" } },
+        { type = "string", custom = false, name = "date", params = { "%Y-%m-%d" } },
       },
       section_c = {
         -- { type = "coloreds", custom = false, name = "githead" },
@@ -66,4 +66,3 @@ require("yatline"):setup {
     },
   },
 }
-
