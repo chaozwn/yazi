@@ -1,4 +1,6 @@
-require("eza-preview"):setup()
+require("smart-enter"):setup {
+	open_multi = true,
+}
 
 require("searchjump"):setup {
   opt_unmatch_fg = "#545c7e",

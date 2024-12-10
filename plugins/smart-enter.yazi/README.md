@@ -1,24 +1,42 @@
 # smart-enter.yazi
 
-This is a Yazi plugin for a smart enter key.
+[`Open`][open] files or [`enter`][enter] directories all in one key!
 
 ## Installation
 
-Install the plugin:
-
-```
-ya pack -a Ape/smart-enter
+```sh
+ya pack -a yazi-rs/plugins:smart-enter
 ```
 
-Create `~/.config/yazi/keymap.toml` and add:
+## Usage
 
-```
+Bind your <kbd>l</kbd> key to the plugin, in your `~/.config/yazi/keymap.toml`:
+
+```toml
 [[manager.prepend_keymap]]
-on   = "<Enter>"
+on   = "l"
 run  = "plugin --sync smart-enter"
+# For upcoming Yazi 0.4 (nightly version):
+# run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
 ```
 
-## Acknowledgements
+## Advanced
 
-The plugin was originally adopted from the Tips page in Yazi docs.
+By default, `--hovered` is passed to the [`open`][open] command, make the behavior consistent with [`enter`][enter] avoiding accidental triggers,
+which means both will only target the currently hovered file.
+
+If you still want `open` to target multiple selected files, add this to your `~/.config/yazi/init.lua`:
+
+```lua
+require("smart-enter"):setup {
+	open_multi = true,
+}
+```
+
+## License
+
+This plugin is MIT-licensed. For more information check the [LICENSE](LICENSE) file.
+
+[open]: https://yazi-rs.github.io/docs/configuration/keymap/#manager.open
+[enter]: https://yazi-rs.github.io/docs/configuration/keymap/#manager.enter
