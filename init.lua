@@ -1,5 +1,5 @@
 require("smart-enter"):setup {
-	open_multi = true,
+  open_multi = true,
 }
 
 require("searchjump"):setup {
@@ -51,7 +51,7 @@ require("yatline"):setup {
         { type = "string", custom = false, name = "hovered_size" },
       },
       section_c = {
-        { type = "string",   custom = false, name = "hovered_name" },
+        { type = "string", custom = false, name = "hovered_name" },
         { type = "coloreds", custom = false, name = "count" },
       },
     },
