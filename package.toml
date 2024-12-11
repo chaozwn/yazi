@@ -2,12 +2,13 @@
 deps = [
   { use = "Sonico98/exifaudio", rev = "d794614" },
   { use = "lpnh/fg", rev = "a7e1a82" },
-  { use = "Reledia/glow", rev = "c2ed51e" },
   { use = "ndtoan96/ouch", rev = "b869886" },
   { use = "qsdrqs/searchjump", rev = "489b0db" },
   { use = "orhnk/system-clipboard", rev = "7775a80" },
   { use = "imsi32/yatline", rev = "1b4a9a1" },
-  { use = "Lil-Dank/lazygit", rev = "c82794f" }, { use = "yazi-rs/plugins:smart-enter", rev = "ec97f88" }, { use = "yazi-rs/plugins:max-preview", rev = "ec97f88" },
+  { use = "Lil-Dank/lazygit", rev = "c82794f" },
+  { use = "yazi-rs/plugins:smart-enter", rev = "ec97f88" },
+  { use = "yazi-rs/plugins:max-preview", rev = "ec97f88" },
 ]
 
 [flavor]
