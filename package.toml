@@ -7,8 +7,8 @@ deps = [
   { use = "orhnk/system-clipboard", rev = "7775a80" },
   { use = "imsi32/yatline", rev = "1b4a9a1" },
   { use = "Lil-Dank/lazygit", rev = "c82794f" },
-  { use = "yazi-rs/plugins:smart-enter", rev = "ec97f88" },
-  { use = "yazi-rs/plugins:max-preview", rev = "ec97f88" },
+  { use = "yazi-rs/plugins:smart-enter", rev = "62f0789" },
+  { use = "yazi-rs/plugins:max-preview", rev = "62f0789" },
 ]
 
 [flavor]
