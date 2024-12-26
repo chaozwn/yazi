@@ -8,6 +8,12 @@ brew tap homebrew/cask-fonts && brew install --cask font-symbols-only-nerd-font
 ```shell
 echo 'export PATH="/opt/homebrew/opt/file-formula/bin:$PATH"' >> ~/.zshrc
 ```
+## backup, clone and install
+
+```shell
+mv ~/.config/yazi ~/.config/yazi.bak
+git clone --depth 1 https://github.com/{{Your Github Name}}/yazi.git ~/.config/yazi
+```
 
 # Add before to shell
 
