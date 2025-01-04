@@ -5,10 +5,6 @@
 [manager]
 
 keymap = [
-  # eza preview
-  { on = [
-    "E",
-  ], run = "plugin eza-preview", desc = "Toggle tree/list dir preview" },
   { on = [
     "<Esc>",
   ], run = "escape", desc = "Exit visual mode, clear selected, or cancel search" },
@@ -82,12 +78,10 @@ keymap = [
     "leave",
     "escape --visual --select",
   ], desc = "Go back to the parent directory" },
+
   { on = [
     "l",
-  ], run = [
-    "enter",
-    "escape --visual --select",
-  ], desc = "Enter the child directory" },
+  ], run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 
   { on = [
     "H",
@@ -170,11 +164,17 @@ keymap = [
     "escape --visual --select",
   ], desc = "Copy the selected files" },
   { on = [
+    "Y",
+  ], run = "unyank", desc = "Cancel the yank status of files" },
+  { on = [
     "x",
   ], run = [
     "yank --cut",
     "escape --visual --select",
   ], desc = "Cut the selected files" },
+  { on = [
+    "X",
+  ], run = "unyank", desc = "Cancel the yank status of files" },
   { on = [
     "p",
   ], run = "paste", desc = "Paste the files" },
@@ -211,10 +211,13 @@ keymap = [
   { on = [
     ":",
   ], run = "shell --interactive --block", desc = "Run a shell command (block the UI until the command finishes)" },
+
+  # plugins 
   { on = [
     "t",
     "d",
   ], run = "shell --block lazydocker --confirm", desc = "open lazydocker" },
+
   { on = [
     ".",
   ], run = "hidden toggle", desc = "Toggle the visibility of hidden files" },
@@ -401,6 +404,31 @@ keymap = [
   { on = [
     "~",
   ], run = "help", desc = "Open help" },
+
+  { on = [
+    "k",
+  ], run = "plugin arrow --args=-1" },
+
+  { on = [
+    "j",
+  ], run = "plugin arrow --args=1" },
+
+  { on = [
+    "S",
+  ], run = "plugin fg --args='rg'", desc = "find file by content (ripgrep match)" },
+
+  { on = [
+    "F",
+  ], run = "plugin fg --args='rga'", desc = "find file by content (ripgrep also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.)" },
+
+  { on = [
+    "f",
+  ], run = "plugin fg --args='fzf'", desc = "find file by filename" },
+
+  { on = [
+    "t",
+    "l",
+  ], run = "plugin lazygit", desc = "run lazygit" },
 ]
 
 [tasks]
@@ -446,12 +474,9 @@ keymap = [
   ], run = "help", desc = "Open help" },
 ]
 
-[select]
+[pick]
 
 keymap = [
-  { on = [
-    "<C-q>",
-  ], run = "close", desc = "Cancel selection" },
   { on = [
     "<Esc>",
   ], run = "close", desc = "Cancel selection" },
@@ -459,37 +484,35 @@ keymap = [
     "<C-[>",
   ], run = "close", desc = "Cancel selection" },
   { on = [
+    "<C-q>",
+  ], run = "close", desc = "Cancel selection" },
+  { on = [
     "<Enter>",
   ], run = "close --submit", desc = "Submit the selection" },
-
   { on = [
     "k",
   ], run = "arrow -1", desc = "Move cursor up" },
   { on = [
     "j",
   ], run = "arrow 1", desc = "Move cursor down" },
-
   { on = [
     "K",
   ], run = "arrow -5", desc = "Move cursor up 5 lines" },
   { on = [
     "J",
   ], run = "arrow 5", desc = "Move cursor down 5 lines" },
-
   { on = [
     "<Up>",
   ], run = "arrow -1", desc = "Move cursor up" },
   { on = [
     "<Down>",
   ], run = "arrow 1", desc = "Move cursor down" },
-
   { on = [
     "<S-Up>",
   ], run = "arrow -5", desc = "Move cursor up 5 lines" },
   { on = [
     "<S-Down>",
   ], run = "arrow 5", desc = "Move cursor down 5 lines" },
-
   { on = [
     "~",
   ], run = "help", desc = "Open help" },
@@ -596,6 +619,9 @@ keymap = [
   { on = [
     "<Backspace>",
   ], run = "backspace", desc = "Delete the character before the cursor" },
+  { on = [
+    "<Delete>",
+  ], run = "backspace --under", desc = "Delete the character under the cursor" },
   { on = [
     "<C-h>",
   ], run = "backspace", desc = "Delete the character before the cursor" },
@@ -758,55 +784,3 @@ keymap = [
     "/",
   ], run = "filter", desc = "Apply a filter for the help items" },
 ]
-
-[[manager.prepend_keymap]]
-on = ["l"]
-run = "plugin smart-enter"
-desc = "Enter the child directory, or open the file"
-
-[[manager.prepend_keymap]]
-on = ["p"]
-run = "plugin smart-paste"
-desc = "Paste into the hovered directory or CWD"
-
-[[manager.prepend_keymap]]
-on = ["T"]
-run = "plugin max-preview"
-
-[[manager.prepend_keymap]]
-on = ["k"]
-run = "plugin arrow --args=-1"
-
-[[manager.prepend_keymap]]
-on = ["j"]
-run = "plugin arrow --args=1"
-
-[[manager.prepend_keymap]]
-on = ["s"]
-run = "plugin searchjump --args='autocd'"
-desc = "searchjump"
-
-[[manager.prepend_keymap]]
-on = ["S"]
-run = "plugin fg --args='rg'"
-desc = "find file by content (ripgrep match)"
-
-[[manager.prepend_keymap]]
-on = ["F"]
-run = "plugin fg --args='rga'"
-desc = "find file by content (ripgrep also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.)"
-
-[[manager.prepend_keymap]]
-on = ["f"]
-run = "plugin fg --args='fzf'"
-desc = "find file by filename"
-
-[[manager.prepend_keymap]]
-on = "<C-y>"
-run = ["plugin system-clipboard"]
-desc = "copy file to system-clipboard"
-
-[[manager.prepend_keymap]]
-on = ["t", "l"]
-run = "plugin lazygit"
-desc = "run lazygit"

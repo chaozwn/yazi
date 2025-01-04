@@ -2,18 +2,7 @@ require("smart-enter"):setup {
   open_multi = true,
 }
 
-require("searchjump"):setup {
-  opt_unmatch_fg = "#545c7e",
-  opt_match_str_fg = "#c8d3f5",
-  opt_match_str_bg = "#3e68d7",
-  opt_lable_fg = "#c8d3f5",
-  opt_lable_bg = "#ff007c",
-  opt_only_current = false, -- only search the current window
-  -- opt_search_patterns = {}  -- demo:{"%.e%d+","s%d+e%d+"}
-}
-
 local tokyonight_theme = require("yatline-tokyonight"):setup "moon"
--- local tokyonight_theme = require("yatline-catppuccin"):setup "moon"
 
 require("yatline"):setup {
   theme = tokyonight_theme,
