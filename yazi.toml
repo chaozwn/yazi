@@ -122,7 +122,6 @@ rules = [
     "reveal",
     "archive",
   ] },
-
   { name = "*", use = [
     "open",
     "reveal",

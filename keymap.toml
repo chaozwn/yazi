@@ -153,7 +153,7 @@ keymap = [
   ], run = "open --interactive", desc = "Open the selected files interactively" },
   { on = [
     "<Enter>",
-  ], run = 'shell --block nvim --confirm', desc = "Open the selected files" },
+  ], run = 'plugin smartnvim', desc = "Open the selected files" },
   { on = [
     "<C-Enter>",
   ], run = "open --interactive", desc = "Open the selected files interactively" },
@@ -429,6 +429,10 @@ keymap = [
     "t",
     "l",
   ], run = "plugin lazygit", desc = "run lazygit" },
+
+  { on = [
+    "s",
+  ], run = "plugin searchjump --args='autocd'", desc = "searchjump" },
 ]
 
 [tasks]
@@ -441,7 +445,7 @@ keymap = [
     "<C-q>",
   ], run = "close", desc = "Hide the task manager" },
   { on = [
-    "w",
+    "q",
   ], run = "close", desc = "Hide the task manager" },
 
   { on = [

@@ -4,8 +4,8 @@ deps = [
   { use = "lpnh/fg", rev = "9bba743" },
   { use = "imsi32/yatline", rev = "9328205" },
   { use = "Lil-Dank/lazygit", rev = "c82794f" },
-  { use = "yazi-rs/plugins:smart-enter", rev = "600614a" },
   { use = "Reledia/glow", rev = "5ce76dc" },
+  { use = "qsdrqs/searchjump", rev = "489b0db" },
 ]
 
 [flavor]
