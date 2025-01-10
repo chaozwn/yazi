@@ -1,6 +1,7 @@
 require("smart-enter"):setup {
   open_multi = true,
 }
+require("eza-preview"):setup()
 
 local tokyonight_theme = require("yatline-tokyonight"):setup "moon"
 

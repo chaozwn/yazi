@@ -433,6 +433,10 @@ keymap = [
   { on = [
     "s",
   ], run = "plugin searchjump --args='autocd'", desc = "searchjump" },
+
+  { on = [
+    "E",
+  ], run = "plugin eza-preview", desc = "Toggle tree/list dir preview" },
 ]
 
 [tasks]

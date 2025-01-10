@@ -132,4 +132,5 @@ rules = [
 prepend_previewers = [
   { name = "*.md", run = "glow" },
   { mime = "audio/*", run = "exifaudio" },
+  { name = "*/", run = "eza-preview" },
 ]

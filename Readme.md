@@ -1,7 +1,7 @@
 # Install
 
 ```shell
-brew install file yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide exiftool bat lazygit lazydocker sevenzip imagemagick font-symbols-only-nerd-font ripgrep-all mediainfo glow
+brew install file yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide exiftool bat lazygit lazydocker sevenzip imagemagick font-symbols-only-nerd-font ripgrep-all mediainfo glow eza
 brew tap homebrew/cask-fonts && brew install --cask font-symbols-only-nerd-font
 ```
 
@@ -71,6 +71,26 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=separator:#ff966c \
   --color=spinner:#ff007c \
 "
+```
+
+# eza
+
+> add to `.zshrc`
+
+```shell
+# 默认显示 icons：
+alias ls="eza --icons"
+# 显示文件目录详情
+alias ll="eza --icons --long --header"
+# 显示全部文件目录，包括隐藏文件
+alias la="eza --icons --long --header --all"
+# 显示详情的同时，附带 git 状态信息
+alias lg="eza --icons --long --header --all --git"
+
+# 替换 tree 命令
+alias lt="eza --tree -L 2 --icons"
+
+eval "$(zoxide init zsh)"
 ```
 
 ## Keybindings
