@@ -12,7 +12,7 @@ echo 'export PATH="/opt/homebrew/opt/file-formula/bin:$PATH"' >> ~/.zshrc
 
 ```shell
 mv ~/.config/yazi ~/.config/yazi.bak
-git clone --depth 1 https://github.com/{{Your Github Name}}/yazi.git ~/.config/yazi
+git clone --depth 1 https://github.com/chaozwn/yazi.git ~/.config/yazi
 ```
 
 # Add before to shell
